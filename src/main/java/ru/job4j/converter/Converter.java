@@ -2,20 +2,22 @@ package ru.job4j.converter;
 
 public class Converter {
     public static float rubleToEuro(float value) {
-        float rsl = value / 70;
-        return rsl;
+        return value / 50;
     }
 
     public static float rubleToDollar(float value) {
-        float rsl = value / 60;
-        return rsl;
+        return value / 30;
     }
 
     public static void main(String[] args) {
-        int ruble = 140;
-        float euro = Converter.rubleToEuro(ruble);
-        float dollar = Converter.rubleToDollar((ruble));
-        System.out.println(ruble + " rubles are " + euro + " euro.");
-        System.out.println(ruble + " rubles are " + dollar + " dollar.");
+        float ruble = 150;
+        float out = Converter.rubleToEuro(ruble);
+        float expected = 3f;
+        boolean passed = expected == out;
+        System.out.println(ruble + " rubles are 3 euro. Test result : " + passed);
+        out = Converter.rubleToDollar((ruble));
+        expected = 5f;
+        passed = expected == out;
+        System.out.println(ruble + " rubles are 5 dollar. Test result : " + passed);
     }
 }

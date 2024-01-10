@@ -27,5 +27,4 @@ class FactorialTest {
         int expected = 120;
         assertThat(result).isEqualTo(expected);
     }
-
 }
